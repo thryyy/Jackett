@@ -56,6 +56,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Demonoid
  * DivxTotal
  * dmhy
+ * DonTorrent
  * E-Hentai
  * elitetorrent
  * EpubLibre
@@ -114,7 +115,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Pornforall
  * PornLeech
  * PornoLive
- * PornoRip
  * PornosLab
  * PornoTor
  * PornoTorrent
@@ -275,7 +275,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * BeyondHD (BHD)
  * Bibliotik
  * Bit-Bázis
- * Bit-City Reloaded [![(invite needed)][inviteneeded]](#)
+ * Bit-City Reloaded
  * BIT-HDTV
  * BiT-TiTAN
  * Bitded
@@ -581,6 +581,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Twilights Zoom
  * U2 (U2分享園@動漫花園) [![(invite needed)][inviteneeded]](#)
  * UHDBits
+ * UHD-HEAVEN
  * UnionGang [![(invite needed)][inviteneeded]](#)
  * UnlimitZ
  * Vizuk
