@@ -278,6 +278,7 @@ namespace Jackett.Updater
                 "Definitions/awesomehd.yml", // migrated to C#
                 "Definitions/b2s-share.yml",
                 "Definitions/beyond-hd-oneurl.yml", // #12993
+                "Definitions/baibako.yml", // renamed rudub #5673
                 "Definitions/bithq.yml",
                 "Definitions/bigtorrent.yml", // merged with eStone #12352
                 "Definitions/bigtower.yml",
@@ -307,6 +308,7 @@ namespace Jackett.Updater
                 "Definitions/cztorrent.yml",
                 "Definitions/darmowetorenty.yml", // migrated to C#
                 "Definitions/danishbytes.yml", // migrated to C#
+                "Definitions/darktracker.yml",
                 "Definitions/DasUnerwartete.yml",
                 "Definitions/datascene.yml", // switch to *-API #8682
                 "Definitions/demonsite.yml",
@@ -361,6 +363,7 @@ namespace Jackett.Updater
                 "Definitions/hdbc.yml", // renamed to hdbitscom
                 "Definitions/hdclub.yml",
                 "Definitions/hddisk.yml",
+                "Definitions/hdhouse.yml",
                 "Definitions/hdolimpo.yml", // migrated to UNIT3D API
                 "Definitions/hdplus.yml",
                 "Definitions/hdreactor.yml", // renamed to hdhouse
@@ -383,7 +386,6 @@ namespace Jackett.Updater
                 "Definitions/kickasstorrent.yml",
                 "Definitions/kickasstorrent-kathow.yml", // renamed to kickasstorrents-ws
                 "Definitions/kikibt.yml",
-                "Definitions/korsar.yml",
                 "Definitions/lapausetorrents.yml",
                 "Definitions/lat-team.yml", // switch to *-API #8682
                 "Definitions/latinop2p.yml",
@@ -479,7 +481,6 @@ namespace Jackett.Updater
                 "Definitions/tfile.yml",
                 "Definitions/the-madhouse.yml",
                 "Definitions/themoviecave.yml",
-                "Definitions/the-devils-lounge.yml",
                 "Definitions/theresurrection.yml",
                 "Definitions/thespit.yml",
                 "Definitions/thetorrents.yml",
@@ -497,6 +498,7 @@ namespace Jackett.Updater
                 "Definitions/torrentgalaxyorg.yml", // renamed to torrentgalaxy
                 "Definitions/torrenthane.yml",
                 "Definitions/torrentkim.yml",
+                "Definitions/torrentmax.yml",
                 "Definitions/torrentproject.yml",
                 "Definitions/torrentquest.yml",
                 "Definitions/torrentrex.yml",

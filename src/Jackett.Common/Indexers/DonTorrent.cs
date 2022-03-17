@@ -39,10 +39,11 @@ namespace Jackett.Common.Indexers
         private const string SearchUrl = "buscar/";
 
         public override string[] AlternativeSiteLinks { get; protected set; } = {
-            "https://dontorrent.eu/",
+            "https://dontorrent.re/",
             "https://todotorrents.net/",
             "https://tomadivx.net/",
-            "https://seriesblanco.one/"
+            "https://seriesblanco.one/",
+            "https://verdetorrent.com/"
         };
 
         public override string[] LegacySiteLinks { get; protected set; } = {
@@ -51,7 +52,10 @@ namespace Jackett.Common.Indexers
             "https://dontorrent.nu/",
             "https://dontorrent.si/",
             "https://dontorrent.sk/",
-            "https://dontorrent.li/"
+            "https://dontorrent.li/",
+            "https://dontorrent.top/",
+            "https://dontorrent.pm/",
+            "https://dontorrent.eu/"
         };
 
         private static Dictionary<string, string> CategoriesMap => new Dictionary<string, string>
@@ -69,7 +73,7 @@ namespace Jackett.Common.Indexers
             : base(id: "dontorrent",
                    name: "DonTorrent",
                    description: "DonTorrent is a SPANISH public tracker for MOVIES / TV / GENERAL",
-                   link: "https://dontorrent.eu/",
+                   link: "https://dontorrent.re/",
                    caps: new TorznabCapabilities
                    {
                        TvSearchParams = new List<TvSearchParam>
@@ -135,7 +139,7 @@ namespace Jackett.Common.Indexers
         public override async Task<byte[]> Download(Uri link)
         {
             var downloadUrl = link.ToString();
-            if (downloadUrl.Contains("cdn.pizza"))
+            if (downloadUrl.Contains("cdn.pizza") || downloadUrl.Contains("blazing.network"))
             {
                 return await base.Download(link);
             }

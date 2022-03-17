@@ -73,7 +73,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * GkTorrent
  * GloDLS
  * GTorrent.pro
- * HDhouse (HDReactor)
  * IBit
  * Idope
  * Il CorSaRo Blu
@@ -81,6 +80,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Internet Archive (archive.org)
  * Isohunt2
  * iTorrent
+ * JAV-Torrent
  * kickasstorrents.ws
  * kickasstorrents.to
  * KissSub
@@ -152,7 +152,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * TorrentGalaxy (TGx)
  * TorrentKitty
  * TorrentMafya
- * TorrentMax (토렌트맥스)
  * TorrentParadise
  * TorrentProject2
  * TorrentQQ (토렌트큐큐)
@@ -184,7 +183,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Anime-Free
  * AnimeLayer
  * ArenaBG
- * BaibaKo
  * BookTracker
  * BootyTape
  * Catorrent
@@ -195,6 +193,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * EniaHD
  * ExKinoRay
  * ExtremlymTorrents
+ * Fenyarnyek-Tracker
  * Fou-Du-Cinema
  * Gay-Torrents.net
  * Genesis-Movement
@@ -219,6 +218,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * RGFootball
  * RiperAM
  * RockBox
+ * RUDUB (ex-BaibaKoTV)
  * RuTracker
  * Rustorka
  * Sharewood
@@ -325,7 +325,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * DANISH BYTES
  * Darius Tracker
  * Dark-Shadow
- * Dark Tracker
  * DataScene (DS)
  * DataTalli
  * DesiTorrents
@@ -346,7 +345,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Falkon Vision Team
  * FANO.IN [![(invite needed)][inviteneeded]](#)
  * Fantastic Heaven [![(invite needed)][inviteneeded]](#)
- * Fantastiko [![(invite needed)][inviteneeded]](#)
+ * Fantastiko
  * Femdomcult
  * FileList (FL)
  * Film-Paleis
@@ -398,6 +397,8 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * HDZone
  * Hebits
  * HellasTZ
+ * Hidden-Palace
+ * House of Devil
  * HQSource (HQS)
  * Il Corsaro Verde
  * Indietorrents [![(invite needed)][inviteneeded]](#)
@@ -406,10 +407,12 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Immortuos [![(invite needed)][inviteneeded]](#)
  * Insane Tracker
  * IPTorrents (IPT)
+ * JME-REUNIT3D
  * JPopsuki [![(invite needed)][inviteneeded]](#)
  * JPTV
  * Karagarga
  * Keep Friends [![(invite needed)][inviteneeded]](#)
+ * Korsar
  * KrazyZone
  * LastFiles
  * Lat-Team [![(invite needed)][inviteneeded]](#)
@@ -531,6 +534,8 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * TEKNO3D [![(invite needed)][inviteneeded]](#)
  * TellyTorrent
  * teracod (Movie Zone)
+ * The-Crazy-Ones
+ * The-Devils-Lounge
  * The Falling Angels (TFA) [![(invite needed)][inviteneeded]](#)
  * The Geeks
  * The Horror Charnel (THC)
