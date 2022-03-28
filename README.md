@@ -97,7 +97,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * MoviesDVDR
  * MovieTorrent
  * MyPornClub
- * NewPCT (aka: tvsinpagar, descargas2020, torrentlocura, torrentrapid, tumejortorrent, pctnew, etc)
  * NewPCT.me
  * Newstudio
  * Nipponsei
@@ -128,7 +127,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * RuTor
  * RuTracker.RU
  * seleZen
- * Sexxi
  * Sexy-Pics
  * ShizaProject
  * ShowRSS
@@ -140,7 +138,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Tokyo Tosho
  * Torlock
  * Torlook
- * TOROS
  * Torrent Downloads (TD)
  * Torrent Oyun indir
  * torrent.by
@@ -257,6 +254,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * AmigosShareClub
  * anasch.cc
  * AnimeBytes (AB)
+ * AnimeItalia
  * AnimeTorrents (AnT) [![(invite needed)][inviteneeded]](#)
  * AnimeWorld [![(invite needed)][inviteneeded]](#)
  * Anthelion
@@ -303,7 +301,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Carp-Hunter
  * Carpathians
  * CartoonChaos (CC)
- * CasaTorrent [![(invite needed)][inviteneeded]](#)
  * Cathode-Ray.Tube (CRT)
  * CCFBits [![(invite needed)][inviteneeded]](#)
  * CeskeForum
@@ -512,6 +509,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Shazbat [![(invite needed)][inviteneeded]](#)
  * SiamBIT
  * SkipTheCommercials
+ * SkipTheTrailers
  * slosoul
  * SnowPT (SSPT)
  * SoulVoice
@@ -529,6 +527,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Swarmazon
  * Tapochek
  * Tasmanit [![(invite needed)][inviteneeded]](#)
+ * Team CT Game (TCTG)
  * TeamHD
  * TeamOS
  * TEKNO3D [![(invite needed)][inviteneeded]](#)
@@ -586,7 +585,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Twilights Zoom
  * U2 (U2分享園@動漫花園) [![(invite needed)][inviteneeded]](#)
  * UHDBits
- * UHD-HEAVEN [![(invite needed)][inviteneeded]](#)
  * UnionGang [![(invite needed)][inviteneeded]](#)
  * UnlimitZ
  * Vizuk

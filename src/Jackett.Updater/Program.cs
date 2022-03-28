@@ -297,6 +297,7 @@ namespace Jackett.Updater
                 "Definitions/btstornet.yml",
                 "Definitions/btworld.yml",
                 "Definitions/btxpress.yml",
+                "Definitions/casatorrent.yml", // renamed to teamctgame
                 "Definitions/casstudiotv.yml",
                 "Definitions/channelx.yml",
                 "Definitions/cili180.yml", // renamed to liaorencili
@@ -391,6 +392,7 @@ namespace Jackett.Updater
                 "Definitions/latinop2p.yml",
                 "Definitions/leaguehd.yml", // renamed to lemonhd
                 "Definitions/lechaudron.yml",
+                "Definitions/legacyhd.yml", // renamed realflix
                 "Definitions/lemencili.yml",
                 "Definitions/leparadisdunet.yml",
                 "Definitions/leporno.yml",
@@ -453,6 +455,7 @@ namespace Jackett.Updater
                 "Definitions/sdkino.yml",
                 "Definitions/secretcinema.yml", // migrated to C# gazelle base tracker
                 "Definitions/seedpeer.yml",
+                "Definitions/sexxi.yml",
                 "Definitions/sharefiles.yml",
                 "Definitions/shareisland.yml", // switch to *-API #8682
                 "Definitions/sharespacedb.yml",
@@ -490,6 +493,7 @@ namespace Jackett.Updater
                 "Definitions/tntfork.yml",
                 "Definitions/tntvillage.yml",
                 "Definitions/topnow.yml",
+                "Definitions/toros.yml",
                 "Definitions/torrent-paradise-ml.yml",
                 "Definitions/torrent4you.yml",
                 "Definitions/torrentbomb.yml",
@@ -517,6 +521,7 @@ namespace Jackett.Updater
                 "Definitions/ttobogo.yml",
                 "Definitions/turknova.yml",
                 "Definitions/u-torrents.yml",
+                "Definitions/uhd-heaven.yml",
                 "Definitions/ultimategamerclub.yml",
                 "Definitions/ultrahdclub.yml",
                 "Definitions/uniotaku.yml", // to be migrated to c#

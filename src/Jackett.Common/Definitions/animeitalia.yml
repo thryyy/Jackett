@@ -1,22 +1,38 @@
 ---
-id: uhd-heaven
-name: UHD-HEAVEN
-description: "UHD-HEAVEN is a Private Torrent Tracker for UHD MOVIES / TV"
-language: en-US
+id: animeitalia
+name: AnimeItalia
+description: "AnimeItalia is an ITALIAN Private Torrent Tracker for ANIME"
+language: it-IT
 type: private
 encoding: UTF-8
 links:
-  - https://uhd-heaven.xyz/
+  - https://animeitalia.org/
 
 caps:
   categorymappings:
-    - {id: 1, cat: Movies, desc: "Movies"}
-    - {id: 2, cat: TV, desc: "TV"}
+    - {id: 1, cat: Movies, desc: "Film ITA"}
+    - {id: 2, cat: TV, desc: "Serie TV"}
+    - {id: 3, cat: Audio, desc: "Musica"}
+    - {id: 4, cat: Console, desc: "Giochi"}
+    - {id: 5, cat: PC, desc: "Programmi"}
+    - {id: 6, cat: TV/Anime, desc: "Anime SUB-ITA"}
+    - {id: 7, cat: TV/Anime, desc: "Anime ITA"}
+    - {id: 8, cat: Movies/Other, desc: "Film Anime SUB-ITA"}
+    - {id: 9, cat: Movies/Other, desc: "Film Anime ITA"}
+    - {id: 10, cat: Books/Comics, desc: "Manga ITA"}
+    - {id: 11, cat: Books/Comics, desc: "Manga ENG"}
+    - {id: 12, cat: Audio, desc: "Anime Music"}
+    - {id: 13, cat: Other, desc: "Foto Anime"}
+    - {id: 14, cat: XXX/Other, desc: "Hentai SUB-ITA"}
+    - {id: 15, cat: XXX/Other, desc: "Hentai ITA"}
+    - {id: 16, cat: XXX/ImageSet, desc: "Foto Hentai"}
 
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid]
     movie-search: [q, imdbid, tmdbid]
+    music-search: [q]
+    book-search: [q]
 
 settings:
   - name: apikey
@@ -25,7 +41,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://uhd-heaven.xyz/\" target =_blank>UHD-HEAVEN</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://animeitalia.org/\" target =_blank>AnimeItalia</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -74,6 +90,10 @@ search:
     sortDirection: "{{ .Config.type }}"
     perPage: 100
     page: 1
+
+  keywordsfilters:
+    - name: re_replace
+      args: ["\\.", " "]
 
   rows:
     selector: data
@@ -130,10 +150,6 @@ search:
       case:
         0: 1 # normal
         1: 2 # double
-# global MR is 0.4 but torrents must be seeded for 3 days regardless of ratio
-#    minimumratio:
-#      text: 0.4
-    minimumseedtime:
-      # 7 days (as seconds = 7 x 24 x 60 x 60)
-      text: 604800
-# json UNIT3D 6.0.0
+    minimumratio:
+      text: 1.0
+# json UNIT3D 6.0.4
