@@ -280,6 +280,7 @@ namespace Jackett.Updater
                 "Definitions/beyond-hd-oneurl.yml", // #12993
                 "Definitions/baibako.yml", // renamed rudub #5673
                 "Definitions/bithq.yml",
+                "Definitions/bit-titan.yml",
                 "Definitions/bigtorrent.yml", // merged with eStone #12352
                 "Definitions/bigtower.yml",
                 "Definitions/bitme.yml",
@@ -381,12 +382,14 @@ namespace Jackett.Updater
                 "Definitions/infinityt.yml",
                 "Definitions/inperil.yml",
                 "Definitions/isohunt.yml",
+                "Definitions/jme-reunit3d.yml", // switch to -API #13043
                 "Definitions/kapaki.yml",
                 "Definitions/katcrs.yml",
                 "Definitions/kaztorka.yml",
                 "Definitions/kickasstorrent.yml",
                 "Definitions/kickasstorrent-kathow.yml", // renamed to kickasstorrents-ws
                 "Definitions/kikibt.yml",
+                "Definitions/kisssub.yml",
                 "Definitions/lapausetorrents.yml",
                 "Definitions/lat-team.yml", // switch to *-API #8682
                 "Definitions/latinop2p.yml",
@@ -482,6 +485,7 @@ namespace Jackett.Updater
                 "Definitions/tehconnection.yml",
                 "Definitions/tellytorrent.yml", // switch to *-API #8682
                 "Definitions/tfile.yml",
+                "Definitions/the-devils-lounge.yml",
                 "Definitions/the-madhouse.yml",
                 "Definitions/themoviecave.yml",
                 "Definitions/theresurrection.yml",
