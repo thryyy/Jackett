@@ -265,6 +265,7 @@ namespace Jackett.Updater
                 "Definitions/aither.yml", // switch to *-API #8682
                 "Definitions/alexfilm.yml",
                 "Definitions/anidex.yml", // migrated to C#
+                "Definitions/animeitalia.yml",
                 "Definitions/animeworld.yml", // switch to *-API #8682
                 "Definitions/aox.yml",
                 "Definitions/apollo.yml", // migrated to C# gazelle base tracker
@@ -415,6 +416,7 @@ namespace Jackett.Updater
                 "Definitions/moviezone.yml", // migrated to teracod #9743
                 "Definitions/music-master.yml",
                 "Definitions/nachtwerk.yml",
+                "Definitions/nbtorrents.yml",
                 "Definitions/nexttorrent.yml",
                 "Definitions/nforce.yml",
                 "Definitions/nnm-club.yml", // renamed to noname-club
@@ -521,6 +523,7 @@ namespace Jackett.Updater
                 "Definitions/torrof.yml",
                 "Definitions/torviet.yml",
                 "Definitions/trackeros.yml", // switch to *-API #12807
+                "Definitions/trackeros-api.yml",
                 "Definitions/tspate.yml",
                 "Definitions/ttobogo.yml",
                 "Definitions/turknova.yml",

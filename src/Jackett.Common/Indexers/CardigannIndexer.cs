@@ -38,7 +38,7 @@ namespace Jackett.Common.Indexers
             set => base.configData = value;
         }
 
-        protected readonly string[] OptionalFields = { "imdb", "imdbid", "rageid", "tmdbid", "tvdbid", "poster", "description" };
+        protected readonly string[] OptionalFields = { "imdb", "imdbid", "rageid", "tmdbid", "tvdbid", "poster", "description", "doubanid" };
 
         private static readonly string[] _SupportedLogicFunctions =
         {
@@ -1399,7 +1399,10 @@ namespace Jackett.Common.Indexers
                 {
                     if (response.Status != HttpStatusCode.OK)
                         throw new Exception($"Error Parsing Json Response: Status={response.Status} Response={results}");
-                    if (response.Status == HttpStatusCode.OK && SearchPath.Response != null && SearchPath.Response.NoResultsMessage != null && ((SearchPath.Response.NoResultsMessage.Equals(results)) || (SearchPath.Response.NoResultsMessage == String.Empty && results == String.Empty)))
+                    if (response.Status == HttpStatusCode.OK
+                        && SearchPath.Response != null
+                        && SearchPath.Response.NoResultsMessage != null
+                        && (SearchPath.Response.NoResultsMessage != String.Empty && results.Contains(SearchPath.Response.NoResultsMessage) || (SearchPath.Response.NoResultsMessage == String.Empty && results == String.Empty)))
                         continue;
                     var parsedJson = JToken.Parse(results);
                     if (parsedJson == null)
@@ -2026,6 +2029,13 @@ namespace Jackett.Common.Indexers
                     var TmdbID = TmdbIDMatch.Groups[1].Value;
                     release.TMDb = ParseUtil.CoerceLong(TmdbID);
                     value = release.TMDb.ToString();
+                    break;
+                case "doubanid":
+                    var DoubanIDRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
+                    var DoubanIDMatch = DoubanIDRegEx.Match(value);
+                    var DoubanID = DoubanIDMatch.Groups[1].Value;
+                    release.DoubanId = ParseUtil.CoerceLong(DoubanID);
+                    value = release.DoubanId.ToString();
                     break;
                 case "rageid":
                     var RageIDRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);

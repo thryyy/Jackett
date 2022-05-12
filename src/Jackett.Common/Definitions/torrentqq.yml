@@ -7,13 +7,8 @@ type: public
 encoding: UTF-8
 followredirect: true
 links:
-  - https://torrentqq138.com/
+  - https://torrentqq142.com/
 legacylinks:
-  - https://torrentqq121.com/
-  - https://torrentqq122.com/
-  - https://torrentqq123.com/
-  - https://torrentqq125.com/
-  - https://torrentqq126.com/
   - https://torrentqq127.com/
   - https://torrentqq128.com/
   - https://torrentqq129.com/
@@ -25,6 +20,10 @@ legacylinks:
   - https://torrentqq135.com/
   - https://torrentqq136.com/
   - https://torrentqq137.com/
+  - https://torrentqq138.com/
+  - https://torrentqq139.com/
+  - https://torrentqq140.com/
+  - https://torrentqq141.com/
 
 caps:
   categorymappings:
@@ -49,7 +48,7 @@ settings:
   - name: flaresolverr
     type: info
     label: FlareSolverr
-    default: This site may use Cloudflare DDoS Protection, therefore Jackett requires <a href="https://github.com/Jackett/Jackett#configuring-flaresolverr" target="_blank">FlareSolver</a> to access it.
+    default: This site may use Cloudflare DDoS Protection, therefore Jackett requires <a href="https://github.com/Jackett/Jackett#configuring-flaresolverr" target="_blank">FlareSolverr</a> to access it.
 
 download:
   infohash:

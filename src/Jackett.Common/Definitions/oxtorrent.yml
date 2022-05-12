@@ -7,9 +7,8 @@ type: public
 encoding: UTF-8
 followredirect: true
 links:
-  - https://www.oxtorrent.re/
-  - https://oxtorrent.unblockit.day/
-  - https://oxtorrent.nocensor.sbs/
+  - https://www.torrent911.net/
+  - https://www.t911.me/
 legacylinks:
   - https://www.oxtorrent.bz/
   - https://www.oxtorrent.ws/
@@ -31,17 +30,23 @@ legacylinks:
   - https://www.oxtorrent.be/
   - https://oxtorrent.unblockit.cam/
   - https://oxtorrent.nocensor.biz/
+  - https://oxtorrent.unblockit.day/
+  - https://www.oxtorrent.re/
+  - https://oxtorrent.unblockit.llc/
+  - https://www.torrent911.com/
+  - https://www.t911.net/
+  - https://oxtorrent.unblockit.blue/ # proxy for *.co, a clone without derniers
+  - https://oxtorrent.nocensor.sbs/ # proxy for *.co, a clone without derniers
 
 caps:
   categorymappings:
-    - {id: movies, cat: Movies, desc: "Movies"}
-    - {id: tvshows, cat: TV, desc: "TV Shows"}
-    - {id: softwares, cat: PC, desc: "Softwares"}
-    - {id: music, cat: Audio, desc: "Music"}
-    - {id: console-games, cat: Console, desc: "Console Games"}
-    - {id: pc-games, cat: PC/Games, desc: "PC Games"}
-    - {id: books, cat: Books, desc: "Books"}
-    - {id: xxx, cat: XXX, desc: "XXX"}
+    - {id: Films, cat: Movies, desc: "Movies"}
+    - {id: Séries, cat: TV, desc: "TV"}
+    - {id: Musiques, cat: Audio, desc: "Music"}
+    - {id: Ebooks, cat: Books, desc: "Books"}
+    - {id: Logiciels, cat: PC, desc: "Software"}
+    - {id: Jeux-PC, cat: PC/Games, desc: "PC Games"}
+    - {id: Jeux-Consoles, cat: Console/XBox 360, desc: "Console Games"}
 
   modes:
     search: [q]
@@ -98,15 +103,7 @@ search:
   fields:
     category:
       selector: td:nth-child(1) i, td:nth-child(1) div i
-      case:
-        .Films: "movies"
-        .Séries: "tvshows"
-        .Logiciels: "softwares"
-        .Musique: "music"
-        .Jeux-Consoles: "console-games"
-        .Jeux-PC: "pc-games"
-        .Ebook: "books"
-        .Porno: "xxx"
+      attribute: class
     site_date:
       selector: td:nth-child(1) a
       filters:

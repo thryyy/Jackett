@@ -117,11 +117,12 @@ search:
       inputs:
         passkey: "{{ .Config.passkey }}"
         category: "{{ if .Categories }}{{ range .Categories }}{{.}}+{{end}}{{ else }}{{ end }}"
-        search: "{{ if .Query.TMDBID }}{{ else }}{{ .Keywords }}{{ end }}"
+        search: "{{ .Keywords }}"
         tmdbid: "{{ .Query.TMDBID }}"
-        freeleech: "{{ if .Config.freeleech }}1{{ else }}{{ end }}"
+        $raw: "{{ if .Config.freeleech }}&freeleech=1{{ else }}{{ end }}"
       response:
         type: json
+        noResultsMessage: '"descr": "no result"'
 
   rows:
     selector: torrents
