@@ -89,7 +89,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * LinuxTracker
  * Mac Torrents Download
  * MegaPeer
- * MejorTorrent
  * Mikan
  * MioBT
  * MixTapeTorrent
@@ -171,7 +170,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * YourBittorrent
  * YTS.ag
  * zetorrents
- * Zooqle
 </details>
 
 <details> <summary> <b> Supported Semi-Private Trackers </b> </summary>
@@ -222,6 +220,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * RUDUB (ex-BaibaKoTV)
  * RuTracker
  * Rustorka
+ * SATClubbing
  * Sharewood
  * SkTorrent
  * SkTorrent-org
@@ -269,7 +268,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Aussierul.es [![(invite needed)][inviteneeded]](#)
  * AvistaZ (AsiaTorrents)
  * Back-ups [![(invite needed)][inviteneeded]](#)
- * bB [![(invite needed)][inviteneeded]](#)
  * BakaBT
  * BeiTai
  * Best-Core
@@ -409,7 +407,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Insane Tracker
  * IPTorrents (IPT)
  * JME-REUNIT3D
- * JPopsuki [![(invite needed)][inviteneeded]](#)
+ * JPopsuki
  * JPTV
  * Karagarga
  * Keep Friends [![(invite needed)][inviteneeded]](#)
