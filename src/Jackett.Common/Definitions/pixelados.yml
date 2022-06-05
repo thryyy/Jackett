@@ -1,24 +1,27 @@
 ---
-id: hidden-palace
-name: Hidden-Palace
-description: "Hidden-Palace is a Private torrent site for MOVIES / TV"
+id: pixelados
+name: Pixelados
+description: "Pixelados is a Spanish Private Torrent Tracker for HD MOVIES / TV"
 language: en-US
 type: private
 encoding: UTF-8
 links:
-  - https://hidden-palace.net/
-legacylinks:
-  - https://hidden-palace.xyz/
+  - https://pixelados.tv/
 
 caps:
   categorymappings:
-    - {id: 1, cat: Movies, desc: "Movie"}
-    - {id: 2, cat: TV, desc: "TV"}
+    - {id: 1, cat: Movies, desc: "Películas"}
+    - {id: 2, cat: TV, desc: "Series"}
+    - {id: 3, cat: Audio, desc: "Música"}
+    - {id: 4, cat: TV/Documentary, desc: "Documentales"}
+    - {id: 5, cat: TV/Sport, desc: "Deportes"}
+    - {id: 6, cat: TV/Anime, desc: "Animación"}
 
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid]
     movie-search: [q, imdbid, tmdbid]
+    music-search: [q]
 
 settings:
   - name: apikey
@@ -27,7 +30,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://hidden-palace.net/\" target =_blank>Hidden-Palace</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://pixelados.tv/\" target =_blank>Pixelados</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -88,8 +91,8 @@ search:
       selector: meta.total
 
   fields:
-    categorydesc:
-      selector: category
+    category:
+      selector: category_id
     title:
       selector: name
     details:
@@ -136,9 +139,10 @@ search:
       case:
         0: 1 # normal
         1: 2 # double
-    minimumratio:
-      text: 1.0
+# global MR is 0.4 but torrents must be seeded for 7 days regardless of ratio
+#    minimumratio:
+#      text: 0.4
     minimumseedtime:
-      # 1 day (as seconds = 1 x 24 x 60 x 60)
-      text: 86400
-# json UNIT3D 6.0.5
+      # 7 day (as seconds = 7 x 24 x 60 x 60)
+      text: 604800
+# json UNIT3D 6.1.0 custom
