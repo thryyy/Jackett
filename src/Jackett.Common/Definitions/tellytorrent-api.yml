@@ -1,21 +1,33 @@
 ---
-id: skipthecommercials-api
-name: SkipTheCommercials (API)
-description: "SkipTheCommercials (STC) is a Private Torrent Tracker for TV"
+id: tellytorrent-api
+name: TellyTorrent (API)
+description: "TellyTorrent is an INDIAN Private Tracker for MOVIES / TV"
 language: en-US
 type: private
 encoding: UTF-8
 links:
-  - https://skipthecommericals.xyz/
+  - https://telly.wtf/
+legacylinks:
+  - https://tellytorrent.net/
+  - https://telly.cc/
+  - https://telly.to/
 
 caps:
   categorymappings:
-    - {id: 2, cat: TV, desc: "TV Show"}
+    - {id: 1, cat: Movies, desc: "Movie"}
+    - {id: 2, cat: TV, desc: "TV"}
+    - {id: 3, cat: Audio, desc: "Music"}
+    - {id: 4, cat: Movies/WEB-DL, desc: "Web Originals"}
+    - {id: 5, cat: PC/Games, desc: "Games"}
+    - {id: 6, cat: PC/0day, desc: "Application"}
+    - {id: 7, cat: PC/Mobile-Other, desc: "Mobile App"}
+    - {id: 8, cat: Movies, desc: "Movies"}
 
   modes:
     search: [q]
-    tv-search: [q, season, ep, imdbid, tvdbid, tmdbid]
+    tv-search: [q, season, ep, imdbid, tvdbid]
     movie-search: [q, imdbid, tmdbid]
+    music-search: [q]
 
 settings:
   - name: apikey
@@ -24,7 +36,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://skipthecommericals.xyz/\" target =_blank>SkipTheCommercials</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://telly.wtf/\" target =_blank>TellyTorrent</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -93,8 +105,6 @@ search:
       selector: details_link
     download:
       selector: download_link
-    infohash:
-      selector: info_hash
     poster:
       selector: poster
       filters:
@@ -135,7 +145,10 @@ search:
       case:
         0: 1 # normal
         1: 2 # double
+# global MR is 0.4 but torrents must be seeded for 7 days regardless of ratio
+#    minimumratio:
+#      text: 0.4
     minimumseedtime:
-      # 7 days (as seconds = 7 x 24 x 60 x 60)
+      # 7 day (as seconds = 7 x 24 x 60 x 60)
       text: 604800
 # json UNIT3D 6.1.0

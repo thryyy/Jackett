@@ -265,6 +265,7 @@ namespace Jackett.Updater
                 "Definitions/aither.yml", // switch to *-API #8682
                 "Definitions/alein.yml",
                 "Definitions/alexfilm.yml",
+                "Definitions/alleenretail.yml",
                 "Definitions/angietorrents.yml",
                 "Definitions/anidex.yml", // migrated to C#
                 "Definitions/animeitalia.yml",
@@ -430,7 +431,6 @@ namespace Jackett.Updater
                 "Definitions/nyoo.yml",
                 "Definitions/oasis.yml",
                 "Definitions/obscure.yml",
-                "Definitions/oncesearch.yml",
                 "Definitions/onlineselfeducation.yml",
                 "Definitions/onlyscene.yml",
                 "Definitions/passionetorrent.yml",
@@ -487,7 +487,6 @@ namespace Jackett.Updater
                 "Definitions/tbplus.yml",
                 "Definitions/tehconnection.yml",
                 "Definitions/tellytorrent.yml", // switch to *-API #8682
-                "Definitions/tellytorrent-api.yml",
                 "Definitions/tenyardtracker.yml", // to be migrated to c#, #795
                 "Definitions/tfile.yml",
                 "Definitions/the-devils-lounge.yml",
@@ -535,6 +534,7 @@ namespace Jackett.Updater
                 "Definitions/uhd-heaven.yml",
                 "Definitions/ultimategamerclub.yml",
                 "Definitions/ultrahdclub.yml",
+                "Definitions/underverse.yml",
                 "Definitions/uniotaku.yml", // to be migrated to c#
                 "Definitions/utorrents.yml", // same as SzeneFZ now
                 "Definitions/vanila.yml",
