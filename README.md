@@ -109,7 +109,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * OnceSearch
  * OneJAV
  * OpenSharing
- * OxTorrent
  * ParnuXi
  * PC-torrent
  * PiratBit
@@ -150,11 +149,11 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * torrent-pirat
  * Torrent9
  * Torrent9 clone
+ * Torrent911
  * TorrentDownload
  * TorrentFunk
  * TorrentGalaxy (TGx)
  * TorrentKitty
- * TorrentParadise
  * TorrentProject2
  * TorrentQQ (토렌트큐큐)
  * Torrents.csv
@@ -167,7 +166,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * UnionDHT
  * VSTHouse
  * VST Torrents
- * xBiT
  * xxxAdultTorrent
  * xxxtor
  * xxxtorrents
@@ -428,6 +426,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Libble [![(invite needed)][inviteneeded]](#)
  * LibraNet (LN)
  * LinkoManija [![(invite needed)][inviteneeded]](#)
+ * Locadora
  * LosslessClub [![(invite needed)][inviteneeded]](#)
  * M-Team TP (MTTP) [![(invite needed)][inviteneeded]](#)
  * MaDs Revolution [![(invite needed)][inviteneeded]](#)
@@ -454,7 +453,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Nebulance (NBL) (TransmiTheNet)
  * NetCosmo
  * NorBits
- * oMg[WtF]trackr
  * OpenCD [![(invite needed)][inviteneeded]](#)
  * Oppaitime
  * Orpheus

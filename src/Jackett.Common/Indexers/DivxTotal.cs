@@ -59,7 +59,8 @@ namespace Jackett.Common.Indexers
             "https://www.divxtotal.pm/",
             "https://www.divxtotal.re/",
             "https://www.divxtotal.nl/",
-            "https://www.divxtotal.ac/"
+            "https://www.divxtotal.ac/",
+            "https://www.divxtotal.dev/"
         };
 
         public DivxTotal(IIndexerConfigurationService configService, WebClient w, Logger l, IProtectionService ps,
@@ -67,7 +68,7 @@ namespace Jackett.Common.Indexers
             : base(id: "divxtotal",
                    name: "DivxTotal",
                    description: "DivxTotal is a SPANISH site for Movies, TV series and Software",
-                   link: "https://www.divxtotal.dev/",
+                   link: "https://www.divxtotal.ms/",
                    caps: new TorznabCapabilities
                    {
                        TvSearchParams = new List<TvSearchParam>
@@ -274,7 +275,7 @@ namespace Jackett.Common.Indexers
             var htmlString = await LoadWebPageAsync(detailsStr);
             var htmlDocument = ParseHtmlIntoDocument(htmlString);
 
-            var tables = htmlDocument.QuerySelectorAll("table.table");
+            var tables = htmlDocument.QuerySelectorAll("table.rwd-table");
             foreach (var table in tables)
             {
                 var rows = table.QuerySelectorAll("tbody > tr");
@@ -292,10 +293,8 @@ namespace Jackett.Common.Indexers
                         continue;
 
                     var downloadLink = GetDownloadLink(row);
-                    var episodePublishStr = row.QuerySelectorAll("td")[3].TextContent.Trim();
-                    var episodePublish = TryToParseDate(episodePublishStr, publishDate);
 
-                    seriesReleases.Add(GenerateRelease(episodeTitle, detailsStr, downloadLink, cat, episodePublish, DivxTotalFizeSizes.Series));
+                    seriesReleases.Add(GenerateRelease(episodeTitle, detailsStr, downloadLink, cat, publishDate, DivxTotalFizeSizes.Series));
                 }
             }
 

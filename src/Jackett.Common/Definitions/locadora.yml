@@ -1,40 +1,24 @@
 ---
-id: lat-team-api
-name: Lat-Team (API)
-description: "Lat-Team is a SPANISH Private Torrent Tracker for MOVIES / TV"
-language: es-ES
+id: locadora
+name: Locadora
+description: "Locadora is a Brazilian tracker for Movies and TV Shows"
+language: pt-BR
 type: private
 encoding: UTF-8
 links:
-  - https://lat-team.com/
+  - https://locadora.xyz/
 
 caps:
   categorymappings:
-    - {id: 1, cat: Movies, desc: "Peliculas"}
-    - {id: 2, cat: TV, desc: "TV Series"}
-    - {id: 3, cat: Audio, desc: "Musica"}
-    - {id: 4, cat: Console, desc: "Juegos"}
-    - {id: 5, cat: TV/Anime, desc: "Anime"}
-    - {id: 6, cat: Movies/Other, desc: "Retro Pelicula"}
-    - {id: 7, cat: TV/Other, desc: "Retro Serie TV"}
-    - {id: 8, cat: TV/Foreign, desc: "Telenovelas y Teleseries"}
-    - {id: 9, cat: Audio/Video, desc: "Conciertos"}
-    - {id: 10, cat: TV/Documentary, desc: "Documentales"}
-    - {id: 11, cat: Other, desc: "Videotutoriales y Educativo"}
-    - {id: 12, cat: XXX, desc: "XXX"}
-    - {id: 16, cat: TV/Sport, desc: "Deportes"}
-    - {id: 17, cat: PC, desc: "Sistemas Operativos"}
-    - {id: 18, cat: Books, desc: "E-Books"}
-    - {id: 19, cat: Audio/Audiobook, desc: "Audiolibros"}
-    - {id: 20, cat: Movies/Other, desc: "Películas Oscars"}
-    - {id: 21, cat: Audio/Video, desc: "VideoMixes"}
+    - {id: 1, cat: Movies}
+    - {id: 2, cat: TV}
+    - {id: 6, cat: TV/Anime}
+    - {id: 7, cat: Movies, desc: "Concerts"}
 
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid, tmdbid]
     movie-search: [q, imdbid, tmdbid]
-    music-search: [q]
-    book-search: [q]
 
 settings:
   - name: apikey
@@ -43,7 +27,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://lat-team.com/\" target =_blank>Lat-Team</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://locadora.xyz/\" target =_blank>Locadora</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -96,8 +80,6 @@ search:
   keywordsfilters:
     - name: re_replace
       args: ["\\.", " "]
-    - name: re_replace
-      args: ["(?i)\\bS(\\d+)", "T$1"]
 
   rows:
     selector: data
@@ -108,32 +90,11 @@ search:
   fields:
     category:
       selector: category_id
-    title_vose:
-      selector: name:contains(VOSE)
-      optional: true
-      filters:
-        - name: re_replace
-          args: ["^ *\\[[^\\]]*\\] *", ""] # Remove prefix tags
-        - name: re_replace
-          args: ["(?i)\\bT(\\d+)", "S$1"]
-        - name: re_replace
-          args: ["UHDRip", "BDRip"] # Fix for Radarr
-        - name: append
-          args: " ENGLiSH"
-    title_notvose:
-      selector: name:not(:contains(VOSE))
-      optional: true
-      filters:
-        - name: re_replace
-          args: ["^ *\\[[^\\]]*\\] *", ""] # Remove prefix tags
-        - name: re_replace
-          args: ["(?i)\\bT(\\d+)", "S$1"]
-        - name: re_replace
-          args: ["UHDRip", "BDRip"] # Fix for Radarr
-        - name: append
-          args: " SPANiSH"
     title:
-      text: "{{ if .Result.title_vose }}{{ .Result.title_vose }}{{ else }}{{ .Result.title_notvose }}{{ end }}"
+      selector: name
+      filters:
+        - name: re_replace
+          args: ["\\.", " "]
     details:
       selector: details_link
     download:
@@ -180,9 +141,10 @@ search:
       case:
         0: 1 # normal
         1: 2 # double
-    minimumratio:
-      text: 1.0
+# global MR is 0.4 but torrents must be seeded for 3 days regardless of ratio
+#    minimumratio:
+#      text: 0.4
     minimumseedtime:
-      # 4 days (as seconds = 4 x 24 x 60 x 60)
-      text: 345600
+      # 3 days (as seconds = 3 x 24 x 60 x 60)
+      text: 259200
 # json UNIT3D 6.2.1
