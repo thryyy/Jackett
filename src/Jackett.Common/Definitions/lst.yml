@@ -1,24 +1,28 @@
 ---
-id: blutopia-api
-name: Blutopia (API)
-description: "Blutopia (BLU) is a Private Torrent Tracker for HD MOVIES / TV"
+id: lst
+name: LST
+description: "LST is an English Private tracker for MOVIES / TV / GENERAL"
 language: en-US
 type: private
 encoding: UTF-8
 links:
-  - https://blutopia.xyz/
+  - https://lst.gg/
 
 caps:
   categorymappings:
-    - {id: 1, cat: Movies, desc: "Movie"}
-    - {id: 2, cat: TV, desc: "TV Show"}
-    - {id: 3, cat: Movies/Other, desc: "FANRES"}
-    - {id: 5, cat: Movies/Other, desc: "Trailer"}
+    - {id: 1, cat: Movies, desc: "Movies"}
+    - {id: 2, cat: TV, desc: "TV"}
+    - {id: 6, cat: TV/Anime, desc: "Anime"}
+    - {id: 3, cat: Audio, desc: "Music"}
+    - {id: 4, cat: Console, desc: "Game"}
+    - {id: 5, cat: PC, desc: "Application"}
+    - {id: 7, cat: Other, desc: "Packs"}
 
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid, tmdbid]
     movie-search: [q, imdbid, tmdbid]
+    music-search: [q]
 
 settings:
   - name: apikey
@@ -27,7 +31,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://blutopia.xyz/\" target =_blank>Blutopia</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://lst.gg/\" target =_blank>LST</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -92,6 +96,9 @@ search:
       selector: category_id
     title:
       selector: name
+      filters:
+        - name: re_replace
+          args: ["\\.", " "]
     details:
       selector: details_link
     download:
@@ -99,7 +106,7 @@ search:
     infohash:
       selector: info_hash
     poster:
-      selector: meta.poster
+      selector: poster
       filters:
         - name: replace
           args: ["https://via.placeholder.com/90x135", ""]
@@ -109,10 +116,6 @@ search:
       selector: tmdb_id
     tvdbid:
       selector: tvdb_id
-    genre:
-      selector: meta.genres
-    description:
-      text: "{{ .Result.genre }}"
     files:
       selector: num_file
     seeders:
@@ -142,10 +145,10 @@ search:
       case:
         0: 1 # normal
         1: 2 # double
-# global MR is 0.4 but torrents must be seeded for 7 days regardless of ratio
+# global MR is 1.0 but torrents must be seeded for 3 days regardless of ratio
 #    minimumratio:
-#      text: 0.4
+#      text: 1.0
     minimumseedtime:
-      # 7 day (as seconds = 7 x 24 x 60 x 60)
-      text: 604800
-# json UNIT3D 6.3.0
+      # 3 days (as seconds = 3 x 24 x 60 x 60)
+      text: 259200
+# json UNIT3D 6.2.1

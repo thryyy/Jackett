@@ -38,7 +38,7 @@ namespace Jackett.Common.Indexers
             set => base.configData = value;
         }
 
-        protected readonly string[] OptionalFields = { "imdb", "imdbid", "rageid", "tmdbid", "tvdbid", "poster", "description", "doubanid" };
+        protected readonly string[] OptionalFields = { "imdb", "imdbid", "tmdbid", "rageid", "tvdbid", "tvmazeid", "traktid", "doubanid", "poster", "description" };
 
         private static readonly string[] _SupportedLogicFunctions =
         {
@@ -122,6 +122,7 @@ namespace Jackett.Common.Indexers
             Type = Definition.Type;
             TorznabCaps = new TorznabCapabilities();
             TorznabCaps.ParseCardigannSearchModes(Definition.Caps.Modes);
+            TorznabCaps.SupportsRawSearch = Definition.Caps.Allowrawsearch;
 
             // init config Data
             configData = new ConfigurationData();
@@ -1300,16 +1301,18 @@ namespace Jackett.Common.Indexers
             variables[".Query.IMDBID"] = query.ImdbID;
             variables[".Query.IMDBIDShort"] = query.ImdbIDShort;
             variables[".Query.TMDBID"] = query.TmdbID?.ToString() ?? null;
-            variables[".Query.TVMazeID"] = null;
-            variables[".Query.TraktID"] = null;
+            variables[".Query.TVMazeID"] = query.TvmazeID?.ToString() ?? null;
+            variables[".Query.TraktID"] = query.TraktID?.ToString() ?? null;
+            variables[".Query.DoubanID"] = query.DoubanID?.ToString() ?? null;
             variables[".Query.Album"] = query.Album;
             variables[".Query.Artist"] = query.Artist;
             variables[".Query.Label"] = query.Label;
             variables[".Query.Track"] = query.Track;
-            //variables[".Query.Genre"] = query.Genre ?? new List<string>();
+            variables[".Query.Genre"] = query.Genre;
             variables[".Query.Episode"] = query.GetEpisodeSearchString();
             variables[".Query.Author"] = query.Author;
             variables[".Query.Title"] = query.Title;
+            variables[".Query.Publisher"] = query.Publisher;
 
             var mappedCategories = MapTorznabCapsToTrackers(query);
             if (mappedCategories.Count == 0)
@@ -1621,7 +1624,7 @@ namespace Jackett.Common.Indexers
                                 }
 
                                 var Filters = Definition.Search.Rows.Filters;
-                                var SkipRelease = ParseRowFilters(Filters, release, query, variables, Row);
+                                var SkipRelease = ParseRowFilters(Filters, release, query, variables, Row.ToHtmlPretty());
 
                                 if (SkipRelease)
                                     continue;
@@ -2043,13 +2046,6 @@ namespace Jackett.Common.Indexers
                     release.TMDb = ParseUtil.CoerceLong(TmdbID);
                     value = release.TMDb.ToString();
                     break;
-                case "doubanid":
-                    var DoubanIDRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
-                    var DoubanIDMatch = DoubanIDRegEx.Match(value);
-                    var DoubanID = DoubanIDMatch.Groups[1].Value;
-                    release.DoubanId = ParseUtil.CoerceLong(DoubanID);
-                    value = release.DoubanId.ToString();
-                    break;
                 case "rageid":
                     var RageIDRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
                     var RageIDMatch = RageIDRegEx.Match(value);
@@ -2064,11 +2060,57 @@ namespace Jackett.Common.Indexers
                     release.TVDBId = ParseUtil.CoerceLong(TVDBId);
                     value = release.TVDBId.ToString();
                     break;
+                case "tvmazeid":
+                    var TVMazeIdRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
+                    var TVMazeIdMatch = TVMazeIdRegEx.Match(value);
+                    var TVMazeId = TVMazeIdMatch.Groups[1].Value;
+                    release.TVMazeId = ParseUtil.CoerceLong(TVMazeId);
+                    value = release.TVMazeId.ToString();
+                    break;
+                case "traktid":
+                    var TraktIdRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
+                    var TraktIdMatch = TraktIdRegEx.Match(value);
+                    var TraktId = TraktIdMatch.Groups[1].Value;
+                    release.TraktId = ParseUtil.CoerceLong(TraktId);
+                    value = release.TraktId.ToString();
+                    break;
+                case "doubanid":
+                    var DoubanIDRegEx = new Regex(@"(\d+)", RegexOptions.Compiled);
+                    var DoubanIDMatch = DoubanIDRegEx.Match(value);
+                    var DoubanID = DoubanIDMatch.Groups[1].Value;
+                    release.DoubanId = ParseUtil.CoerceLong(DoubanID);
+                    value = release.DoubanId.ToString();
+                    break;
+                case "genre":
+                    if (release.Genres == null)
+                        release.Genres = new List<string>();
+                    release.Genres = release.Genres.Union(value.Split(',')).ToList();
+                    value = string.Join(",", release.Genres);
+                    break;
+                case "year":
+                    release.Year = ReleaseInfo.GetBytes(value);
+                    value = release.Year.ToString();
+                    break;
                 case "author":
                     release.Author = value;
                     break;
                 case "booktitle":
                     release.BookTitle = value;
+                    break;
+                case "publisher":
+                    release.Publisher = value;
+                    break;
+                case "artist":
+                    release.Artist = value;
+                    break;
+                case "album":
+                    release.Album = value;
+                    break;
+                case "label":
+                    release.Label = value;
+                    break;
+                case "track":
+                    release.Track = value;
                     break;
                 case "poster":
                     if (!string.IsNullOrWhiteSpace(value))

@@ -106,7 +106,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * NNTT
  * NoNaMe Club (NNM-Club)
  * Nyaa.si
- * OnceSearch
  * OneJAV
  * OpenSharing
  * ParnuXi
@@ -114,7 +113,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * PiratBit
  * Pornforall
  * PornLeech
- * PornoLive
  * PornosLab
  * PornoTor
  * PornoTorrent
@@ -162,6 +160,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * TorrentView (토렌트뷰)
  * TorrentWhiz ( 토렌트위즈)
  * Torrentz2eu
+ * truPornolabs
  * Underverse
  * UnionDHT
  * VSTHouse
@@ -304,6 +303,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * BYRBT
  * Carp-Hunter
  * Carpathians
+ * CarPT
  * CartoonChaos (CC)
  * Cathode-Ray.Tube (CRT)
  * CCFBits [![(invite needed)][inviteneeded]](#)
@@ -389,7 +389,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * HDChina (HDWing) [![(invite needed)][inviteneeded]](#)
  * HDCity [![(invite needed)][inviteneeded]](#)
  * HDHome (HDBigger) [![(invite needed)][inviteneeded]](#)
- * HDME
  * HDMonkey
  * HDRoute [![(invite needed)][inviteneeded]](#)
  * HDSky [![(invite needed)][inviteneeded]](#)
@@ -401,7 +400,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Hebits
  * House of Devil
  * HQSource (HQS)
- * Il Corsaro Verde
  * ImmortalSeed (iS)
  * Immortuos
  * Indietorrents [![(invite needed)][inviteneeded]](#)
@@ -428,6 +426,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * LinkoManija [![(invite needed)][inviteneeded]](#)
  * Locadora
  * LosslessClub [![(invite needed)][inviteneeded]](#)
+ * LST
  * M-Team TP (MTTP) [![(invite needed)][inviteneeded]](#)
  * MaDs Revolution [![(invite needed)][inviteneeded]](#)
  * magic-heaven
