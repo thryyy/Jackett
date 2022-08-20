@@ -141,6 +141,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Tokyo Tosho
  * Torlock
  * Torlook
+ * Torrent[CORE]
  * Torrent Downloads (TD)
  * Torrent Oyun indir
  * torrent.by
@@ -207,6 +208,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * LostFilm.tv
  * Magnetico (Local DHT) [[site](https://github.com/boramalper/magnetico)]
  * Marine Tracker
+ * Mazepa
  * Metal Tracker
  * MuziekFrabriek
  * MVGroup Forum
@@ -278,7 +280,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Bit-Bázis
  * Bit-City Reloaded
  * BIT-HDTV
- * BitBR
  * Bitded
  * Bithorlo (BHO)
  * BitHUmen [![(invite needed)][inviteneeded]](#)
@@ -290,12 +291,13 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * BlueBird [![(invite needed)][inviteneeded]](#)
  * Blues-Brothers
  * Blutopia (BLU)
- * Borgzelle  [![(invite needed)][inviteneeded]](#)
+ * Borgzelle [![(invite needed)][inviteneeded]](#)
  * Boxing Torrents
  * Brasil Tracker
  * BroadcasTheNet (BTN)
  * BroadCity
  * BrokenStones [![(invite needed)][inviteneeded]](#)
+ * BreizhPeers
  * BrSociety
  * BTNext (BTNT) [![(invite needed)][inviteneeded]](#)
  * BTSCHOOL
@@ -388,6 +390,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * HDCenter [![(invite needed)][inviteneeded]](#)
  * HDChina (HDWing) [![(invite needed)][inviteneeded]](#)
  * HDCity [![(invite needed)][inviteneeded]](#)
+ * HDFans
  * HDHome (HDBigger) [![(invite needed)][inviteneeded]](#)
  * HDMonkey
  * HDRoute [![(invite needed)][inviteneeded]](#)
@@ -588,7 +591,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * UnionGang [![(invite needed)][inviteneeded]](#)
  * UnlimitZ
  * Vizuk
- * WDT (Wrestling Desires Torrents / Ultimate Wrestling Torrents)
  * White Angel
  * wOOt [![(invite needed)][inviteneeded]](#)
  * World-In-HD [![(invite needed)][inviteneeded]](#)
@@ -744,8 +746,16 @@ Download and extract the latest `Jackett.Binaries.macOS.tar.gz` or `Jackett.Bina
 Detailed instructions are available at [LinuxServer.io Jackett Docker](https://hub.docker.com/r/linuxserver/jackett/). The Jackett Docker is highly recommended, especially if you are having Mono stability issues or having issues running Mono on your system e.g. QNAP, Synology. Thanks to [LinuxServer.io](https://linuxserver.io)
 
 
+## Installation on Alpine Linux
+Detailed instructions are available at [Jackett's Wiki](https://github.com/Jackett/Jackett/wiki/Installation-on-Alpine-Linux).
+
+
 ## Installation on Synology
 Jackett is available as a [beta package](https://synocommunity.com/package/jackett) from [SynoCommunity](https://synocommunity.com/)
+
+
+## Installation on OpenWrt
+Detailed instructions are available at [Jackett's Wiki](https://github.com/Jackett/Jackett/wiki/Installation-on-OpenWrt).
 
 
 ## Running Jackett behind a reverse proxy

@@ -38,7 +38,7 @@ namespace Jackett.Common.Indexers
             set => base.configData = value;
         }
 
-        protected readonly string[] OptionalFields = { "imdb", "imdbid", "tmdbid", "rageid", "tvdbid", "tvmazeid", "traktid", "doubanid", "poster", "description" };
+        protected readonly string[] OptionalFields = { "imdb", "imdbid", "tmdbid", "rageid", "tvdbid", "tvmazeid", "traktid", "doubanid", "poster", "genre", "description" };
 
         private static readonly string[] _SupportedLogicFunctions =
         {
@@ -1129,6 +1129,14 @@ namespace Jackett.Common.Indexers
                             strTag = ":";
                         logger.Debug(string.Format("CardigannIndexer ({0}): strdump{1} {2}", Id, strTag, DebugData));
                         break;
+                    case "validate":
+                        char[] delimiters = { ',', ' ', '/', ')', '(', '.', ';', '[', ']', '"', '|', ':' };
+                        var args = (string)Filter.Args;
+                        var argsList = args.ToLower().Split(delimiters, System.StringSplitOptions.RemoveEmptyEntries);
+                        var validList = argsList.ToList();
+                        var validIntersect = validList.Intersect(Data.ToLower().Split(delimiters, System.StringSplitOptions.RemoveEmptyEntries)).ToList();
+                        Data = string.Join(",", validIntersect);
+                        break;
                     default:
                         break;
                 }
@@ -1485,12 +1493,12 @@ namespace Jackett.Common.Indexers
                                     throw new Exception(string.Format("Error while parsing field={0}, selector={1}, value={2}: {3}", Field.Key, Field.Value.Selector, (value == null ? "<null>" : value), ex.Message));
                                 }
 
-                                var Filters = Definition.Search.Rows.Filters;
-                                var SkipRelease = ParseRowFilters(Filters, release, query, variables, Row);
-
-                                if (SkipRelease)
-                                    continue;
                             }
+                            var Filters = Definition.Search.Rows.Filters;
+                            var SkipRelease = ParseRowFilters(Filters, release, query, variables, Row);
+
+                            if (SkipRelease)
+                                continue;
 
                             releases.Add(release);
                         }
@@ -2084,7 +2092,10 @@ namespace Jackett.Common.Indexers
                 case "genre":
                     if (release.Genres == null)
                         release.Genres = new List<string>();
-                    release.Genres = release.Genres.Union(value.Split(',')).ToList();
+                    char[] delimiters = { ',', ' ', '/', ')', '(', '.', ';', '[', ']', '"', '|', ':' };
+                    var releaseGenres = release.Genres.Union(value.Split(delimiters, System.StringSplitOptions.RemoveEmptyEntries));
+                    releaseGenres = releaseGenres.Select(x => x.Replace("_", " "));
+                    release.Genres = releaseGenres.ToList();
                     value = string.Join(",", release.Genres);
                     break;
                 case "year":

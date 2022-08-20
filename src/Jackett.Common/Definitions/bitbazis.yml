@@ -115,6 +115,7 @@ search:
     sort: "{{ .Config.sort }}"
     type: "{{ .Config.type }}"
     # site does not support imdbid searching
+    # can support genre searching but you need to know the id, eg &genre23=1 for Comedy (id is 23)
 
   rows:
     selector: "table[width=\"100%\"]:last-child tbody tr:has(div.tooltip){{ if .Config.freeleech }}:has(i:contains(\"(Free)\")){{ else }}{{ end }}"
@@ -126,6 +127,10 @@ search:
       filters:
         - name: querystring
           args: cat
+    genre:
+      selector: span.tooltiptext
+    description:
+      text: "{{ .Result.genre }}"
     title:
       selector: div.tooltip
       remove: span
@@ -152,26 +157,27 @@ search:
       text: "{{ if or .Result.download_1 .Result.download_2 }}{{ or .Result.download_1 .Result.download_2 }}{{ else }}{{ end }}"
     size:
       selector: td:nth-child(6)
-    date_browse:
-      # 2022<br>03/15.
-      selector: td:nth-child(7):contains("/")
-      optional: true
-      filters:
-        - name: append
-          args: " +01:00" # CET
-        - name: dateparse
-          args: "200601/02. -07:00"
-    date_browse_xxx:
-      # 22.03.15
-      selector: td:nth-child(7):not(:contains("/"))
-      optional: true
-      filters:
-        - name: append
-          args: " +01:00" # CET
-        - name: dateparse
-          args: "06.01.02 -07:00"
     date:
-      text: "{{ if or .Result.date_browse .Result.date_browse_xxx }}{{ or .Result.date_browse .Result.date_browse_xxx }}{{ else }}now{{ end }}"
+      # 36 perce
+      # 13 órája  és 59 perce
+      # 2 napja  és 10 órája
+      # 1 hete  és 1 napja
+      # 1 éve  és 30 hete
+      selector: td:nth-child(7) span:last-child
+      filters:
+        - name: replace
+          args: ["és ", " "]
+        - name: replace
+          args: ["perce", "minute"]
+        - name: replace
+          args: ["órája", "hour"]
+        - name: replace
+          args: ["napja", "day"]
+        - name: replace
+          args: ["hete", "week"]
+        - name: replace
+          args: ["éve", "year"]
+        - name: timeago
     grabs:
       selector: td:nth-child(5)
     seeders:

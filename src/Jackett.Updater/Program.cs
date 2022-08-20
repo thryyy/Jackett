@@ -286,6 +286,7 @@ namespace Jackett.Updater
                 "Definitions/bigtorrent.yml", // merged with eStone #12352
                 "Definitions/bigtower.yml",
                 "Definitions/bit-titan.yml",
+                "Definitions/bitbr.yml",
                 "Definitions/bithq.yml",
                 "Definitions/bitme.yml",
                 "Definitions/bittorrentam.yml",
@@ -514,7 +515,6 @@ namespace Jackett.Updater
                 "Definitions/torrent-paradise-ml.yml",
                 "Definitions/torrent4you.yml",
                 "Definitions/torrentbomb.yml",
-                "Definitions/torrentcore.yml",
                 "Definitions/torrentcouch.yml",
                 "Definitions/torrentfactory.yml",
                 "Definitions/torrentgalaxyorg.yml", // renamed to torrentgalaxy
@@ -551,6 +551,7 @@ namespace Jackett.Updater
                 "Definitions/vanila.yml",
                 "Definitions/vhstapes.yml",
                 "Definitions/waffles.yml",
+                "Definitions/wdt.yml",
                 "Definitions/witchhunter.yml",
                 "Definitions/world-of-tomorrow.yml", // #9213
                 "Definitions/worldofp2p.yml",
@@ -671,7 +672,9 @@ namespace Jackett.Updater
 
                     if (variant == Variants.JackettVariant.CoreMacOs || variant == Variants.JackettVariant.CoreMacOsArm64
                     || variant == Variants.JackettVariant.CoreLinuxAmdx64 || variant == Variants.JackettVariant.CoreLinuxArm32
-                    || variant == Variants.JackettVariant.CoreLinuxArm64)
+                    || variant == Variants.JackettVariant.CoreLinuxArm64
+                    || variant == Variants.JackettVariant.CoreLinuxMuslAmdx64 || variant == Variants.JackettVariant.CoreLinuxMuslArm32
+                    || variant == Variants.JackettVariant.CoreLinuxMuslArm64)
                     {
                         startInfo.UseShellExecute = false;
                         startInfo.CreateNoWindow = true;
