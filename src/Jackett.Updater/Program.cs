@@ -327,6 +327,7 @@ namespace Jackett.Updater
                 "Definitions/documentarytorrents.yml",
                 "Definitions/downloadville.yml",
                 "Definitions/dragonworld.yml",
+                "Definitions/dragonworldreloaded.yml",
                 "Definitions/dreamteam.yml",
                 "Definitions/dxdhd.yml",
                 "Definitions/efectodoppler.yml",
@@ -391,6 +392,7 @@ namespace Jackett.Updater
                 "Definitions/infinityt.yml",
                 "Definitions/inperil.yml",
                 "Definitions/isohunt.yml",
+                "Definitions/iv-torrents.yml",
                 "Definitions/jme-reunit3d.yml", // switch to -API #13043
                 "Definitions/kapaki.yml",
                 "Definitions/katcrs.yml",
@@ -424,6 +426,7 @@ namespace Jackett.Updater
                 "Definitions/moviezone.yml", // migrated to teracod #9743
                 "Definitions/music-master.yml",
                 "Definitions/nachtwerk.yml",
+                "Definitions/nbtorrents.yml",
                 "Definitions/netlab.yml",
                 "Definitions/nexttorrent.yml",
                 "Definitions/nforce.yml",

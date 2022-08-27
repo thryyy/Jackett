@@ -201,7 +201,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * HD-CzTorrent
  * HDGalaKtik
  * HunTorrent
- * IV-Torrents
  * KinoNaVse100
  * Kinorun
  * Kinozal
@@ -245,7 +244,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * 1ptbar
  * 2 Fast 4 You [![(invite needed)][inviteneeded]](#)
  * 3ChangTrai (3CT) [![(invite needed)][inviteneeded]](#)
- * 3D Torrents (3DT) [![(invite needed)][inviteneeded]](#)
+ * 3D Torrents (3DT)
  * 4thD (4th Dimension)
  * 52PT
  * Abnormal
@@ -336,7 +335,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * DiscFan
  * DivTeam
  * DocsPedia
- * Dragonworld Reloaded [![(invite needed)][inviteneeded]](#)
  * Dream Tracker
  * EbookParadijs
  * Ebooks-Shares
@@ -345,7 +343,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * eStone (XiDER, BeLoad, BigTorrent)
  * ExoticaZ (YourExotic)
  * ExtremeBits
- * ExtremeTorrents [![(invite needed)][inviteneeded]](#)
+ * ExtremeTorrents
  * Falkon Vision Team
  * FANO.IN [![(invite needed)][inviteneeded]](#)
  * Fantastic Heaven [![(invite needed)][inviteneeded]](#)
@@ -520,10 +518,10 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * SpeedApp (SceneFZ, XtreMeZone / MYXZ, ICE Torrent)
  * SpeedCD
  * Speedmaster HD [![(invite needed)][inviteneeded]](#)
- * SpeedTorrent Reloaded [![(invite needed)][inviteneeded]](#)
+ * SpeedTorrent Reloaded
  * SpiderTK
  * Spirit of Revolution [![(invite needed)][inviteneeded]](#)
- * SportHD [![(invite needed)][inviteneeded]](#)
+ * SportHD
  * SportsCult
  * SpringSunday [![(invite needed)][inviteneeded]](#)
  * SugoiMusic
