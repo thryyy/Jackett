@@ -21,7 +21,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
 #### Supported Systems
 * Windows 7 SP1 or greater
 * Linux [supported operating systems here](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md#linux)
-* macOS 10.13 or greater
+* macOS 10.15+ or greater
 
 <details> <summary> <b> Supported Public Trackers </b> </summary>
 
@@ -119,7 +119,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Portugas
  * ProPorn
  * ProStyleX
- * PS4-Torrent
  * Rapidzona
  * RARBG
  * RinTor
@@ -245,6 +244,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * 2 Fast 4 You [![(invite needed)][inviteneeded]](#)
  * 3ChangTrai (3CT) [![(invite needed)][inviteneeded]](#)
  * 3D Torrents (3DT)
+ * 3Evils
  * 4thD (4th Dimension)
  * 52PT
  * Abnormal
@@ -260,7 +260,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * anasch.cc
  * AnimeBytes (AB)
  * AnimeTorrents (AnT) [![(invite needed)][inviteneeded]](#)
- * AnimeWorld [![(invite needed)][inviteneeded]](#)
+ * AnimeWorld
  * Anthelion
  * Araba Fenice (Phoenix) [![(invite needed)][inviteneeded]](#)
  * ArabP2P
@@ -346,7 +346,7 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * ExtremeTorrents
  * Falkon Vision Team
  * FANO.IN [![(invite needed)][inviteneeded]](#)
- * Fantastic Heaven [![(invite needed)][inviteneeded]](#)
+ * Fantastic Heaven
  * Fantastiko
  * Femdomcult
  * FileList (FL)
@@ -385,7 +385,6 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * HDAtmos
  * HDBits [![(invite needed)][inviteneeded]](#)
  * HDC (HDCiTY) [![(invite needed)][inviteneeded]](#)
- * HDCenter [![(invite needed)][inviteneeded]](#)
  * HDChina (HDWing) [![(invite needed)][inviteneeded]](#)
  * HDCity [![(invite needed)][inviteneeded]](#)
  * HDFans
@@ -429,14 +428,13 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * LosslessClub [![(invite needed)][inviteneeded]](#)
  * LST
  * M-Team TP (MTTP) [![(invite needed)][inviteneeded]](#)
- * MaDs Revolution [![(invite needed)][inviteneeded]](#)
+ * MaDs Revolution
  * magic-heaven
  * Magico (Trellas) [![(invite needed)][inviteneeded]](#)
  * Majomparádé (TurkDepo)
  * MediaMaatjes
  * MegamixTracker
  * MeseVilág (Fairytale World)
- * MicroBit (µBit)
  * Milkie
  * MIRcrew
  * MMA-Torrents [![(invite needed)][inviteneeded]](#)
@@ -586,12 +584,12 @@ A third-party Golang SDK for Jackett is available from [webtor-io/go-jackett](ht
  * Twilights Zoom
  * U2 (U2分享園@動漫花園) [![(invite needed)][inviteneeded]](#)
  * UHDBits
- * UnionGang [![(invite needed)][inviteneeded]](#)
+ * UnionGang
  * UnlimitZ
- * Vizuk
  * White Angel
  * wOOt [![(invite needed)][inviteneeded]](#)
  * World-In-HD [![(invite needed)][inviteneeded]](#)
+ * World-of-Tomorrow
  * x-ite.me (XM)
  * xBytesV2
  * XSpeeds (XS)
@@ -726,7 +724,7 @@ On an Ubuntu 16 system: [chrisjohnson00.jackett](https://galaxy.ansible.com/chri
 ## Installation on macOS
 
 ### Prerequisites
-macOS 10.13 or greater
+macOS 10.15+ or greater
 
 ### Install as service
 1. Download and extract the latest `Jackett.Binaries.macOS.tar.gz` or `Jackett.Binaries.macOSARM64.tar.gz` release from the [releases page](https://github.com/Jackett/Jackett/releases).

@@ -369,6 +369,7 @@ namespace Jackett.Updater
                 "Definitions/hachede.yml",
                 "Definitions/hd4free.yml",
                 "Definitions/hdbc.yml", // renamed to hdbitscom
+                "Definitions/hdcenter.yml",
                 "Definitions/hdclub.yml",
                 "Definitions/hddisk.yml",
                 "Definitions/hdhouse.yml",
@@ -418,6 +419,7 @@ namespace Jackett.Updater
                 "Definitions/manicomioshare.yml",
                 "Definitions/megabliz.yml",
                 "Definitions/metal-iplay-ro.yml", // renamed to romanianmetaltorrents
+                "Definitions/microbit.yml",
                 "Definitions/mkvcage.yml",
                 "Definitions/moecat.yml",
                 "Definitions/monova.yml",
@@ -451,6 +453,7 @@ namespace Jackett.Updater
                 "Definitions/polishtracker.yml",
                 "Definitions/pornolive.yml",
                 "Definitions/pornorip.yml",
+                "Definitions/ps4-torrent.yml",
                 "Definitions/pt99.yml",
                 "Definitions/qctorrent.yml",
                 "Definitions/qxr.yml",
@@ -553,10 +556,10 @@ namespace Jackett.Updater
                 "Definitions/utorrents.yml", // same as SzeneFZ now
                 "Definitions/vanila.yml",
                 "Definitions/vhstapes.yml",
+                "Definitions/vizuk.yml",
                 "Definitions/waffles.yml",
                 "Definitions/wdt.yml",
                 "Definitions/witchhunter.yml",
-                "Definitions/world-of-tomorrow.yml", // #9213
                 "Definitions/worldofp2p.yml",
                 "Definitions/worldwidetorrents.yml",
                 "Definitions/xbit.yml",
