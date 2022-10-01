@@ -1,21 +1,31 @@
 ---
-id: skipthetrailers
-name: SkipTheTrailers
-description: "SkipTheTrailers (STT) is a Private Torrent Tracker for MOVIES"
-language: en-US
+id: portugas-api
+name: Portugas (API)
+description: "Portugas is a Private Portoguese Tracker"
+language: pt-PT
 type: private
 encoding: UTF-8
 links:
-  - https://skipthetrailers.xyz/
+  - https://portugas.org/
 
 caps:
   categorymappings:
-    - {id: 1, cat: Movies, desc: "Movies"}
+    - {id: 1, cat: Movies, desc: "Filmes"}
+    - {id: 2, cat: TV, desc: "TV"}
+    - {id: 3, cat: Audio, desc: "Músicas"}
+    - {id: 4, cat: PC/Games, desc: "Jogos"}
+    - {id: 5, cat: PC/0day, desc: "Appz"}
+    - {id: 7, cat: XXX, desc: "XXX"}
+    - {id: 9, cat: Books, desc: "E-Books"}
+    - {id: 10, cat: Movies, desc: "Animação Filmes"}
+    - {id: 11, cat: TV/Anime, desc: "Animação TV"}
 
   modes:
     search: [q]
     tv-search: [q, season, ep, imdbid, tvdbid, tmdbid]
     movie-search: [q, imdbid, tmdbid]
+    music-search: [q]
+    book-search: [q]
 
 settings:
   - name: apikey
@@ -24,7 +34,7 @@ settings:
   - name: info_key
     type: info
     label: About your API key
-    default: "Find or Generate a new API Token by accessing your <a href=\"https://skipthetrailers.xyz/\" target =_blank>SkipTheTrailers</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
+    default: "Find or Generate a new API Token by accessing your <a href=\"https://portugas.org/\" target =_blank>Portugas</a> account <i>My Security</i> page and clicking on the <b>API Token</b> tab."
   - name: freeleech
     type: checkbox
     label: Search freeleech only
@@ -87,8 +97,13 @@ search:
   fields:
     category:
       selector: category_id
+    _audiopt:
+      selector: audio_pt
     title:
       selector: name
+      filters:
+        - name: append
+          args: "{{ if eq .Result._audiopt \"1\" }} Portuguese PT-PT{{ else }}{{ end }}"
     details:
       selector: details_link
     download:
@@ -110,9 +125,9 @@ search:
       selector: meta.genres
       filters:
         - name: re_replace
-          args: ["(?i)(Science Fiction)", "Science_Fiction"]
+          args: ["(?i)(Ficção científica)", "Ficção_científica"]
         - name: re_replace
-          args: ["(?i)(TV Movie)", "TV_Movie"]
+          args: ["(?i)(Cinema TV)", "Cinema_TV"]
         - name: replace
           args: [" & ", "_&_"]
     description:
@@ -147,8 +162,8 @@ search:
         0: 1 # normal
         1: 2 # double
     minimumratio:
-      text: 1.0
+      text: 1.1
     minimumseedtime:
-      # 7 days (as seconds = 2 x 24 x 60 x 60)
-      text: 172800
-# json UNIT3D 6.4.1
+      # 3 days (as seconds = 3 x 24 x 60 x 60)
+      text: 259200
+# json UNIT3D 6.3.0 (custom)

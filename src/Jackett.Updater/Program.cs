@@ -367,9 +367,12 @@ namespace Jackett.Updater
                 "Definitions/gtorrent.yml",
                 "Definitions/hachede-c.yml",
                 "Definitions/hachede.yml",
+                "Definitions/hamsterstudio.yml",
                 "Definitions/hd4free.yml",
                 "Definitions/hdbc.yml", // renamed to hdbitscom
+                "Definitions/hdbitscom.yml",
                 "Definitions/hdcenter.yml",
+                "Definitions/hdcity.yml", // moved to pixelados
                 "Definitions/hdclub.yml",
                 "Definitions/hddisk.yml",
                 "Definitions/hdhouse.yml",
@@ -430,6 +433,7 @@ namespace Jackett.Updater
                 "Definitions/nachtwerk.yml",
                 "Definitions/nbtorrents.yml",
                 "Definitions/netlab.yml",
+                "Definitions/newpct-me.yml",
                 "Definitions/nexttorrent.yml",
                 "Definitions/nforce.yml",
                 "Definitions/nnm-club.yml", // renamed to noname-club
@@ -453,6 +457,7 @@ namespace Jackett.Updater
                 "Definitions/polishtracker.yml",
                 "Definitions/pornolive.yml",
                 "Definitions/pornorip.yml",
+                "Definitions/portugas.yml", // switch to *-API #13542
                 "Definitions/ps4-torrent.yml",
                 "Definitions/pt99.yml",
                 "Definitions/qctorrent.yml",
@@ -546,6 +551,7 @@ namespace Jackett.Updater
                 "Definitions/trackeros.yml", // switch to *-API #12807
                 "Definitions/tspate.yml",
                 "Definitions/ttobogo.yml",
+                "Definitions/turktracker.yml",
                 "Definitions/turknova.yml",
                 "Definitions/u-torrents.yml",
                 "Definitions/uhd-heaven.yml",
@@ -558,7 +564,6 @@ namespace Jackett.Updater
                 "Definitions/vhstapes.yml",
                 "Definitions/vizuk.yml",
                 "Definitions/waffles.yml",
-                "Definitions/wdt.yml",
                 "Definitions/witchhunter.yml",
                 "Definitions/worldofp2p.yml",
                 "Definitions/worldwidetorrents.yml",
