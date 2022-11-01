@@ -7,11 +7,8 @@ type: public
 encoding: UTF-8
 # use https://tellme.pw/btsow to find the new domain
 links:
-  - https://btsow.cfd/
+  - https://btsow.quest/
 legacylinks:
-  - https://btsow.monster/
-  - https://btsow.casa/
-  - https://btsow.website/
   - https://btsow.online/
   - https://btsow.work/
   - https://btsow.store/
@@ -25,6 +22,8 @@ legacylinks:
   - https://btsow.rest/
   - https://btsow.bar/
   - https://btsow.click/
+  - https://btsow.cfd/
+  - https://btsow.sbs/
 
 caps:
   categories:

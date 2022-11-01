@@ -57,6 +57,7 @@ caps:
     - {id: 447, cat: Books/Comics, desc: "Livres / Bande Dessinée"}
     - {id: 448, cat: Books/Comics, desc: "Livres / Comic"}
     - {id: 449, cat: Books/Comics, desc: "Livres / Manga"}
+    - {id: 468, cat: Books/Other, desc: "Livres / Divers"}
     - {id: 450, cat: PC/Games, desc: "Logiciels / Jeu PC"}
     - {id: 451, cat: PC/Games, desc: "Logiciels / Jeu Mac"}
     - {id: 452, cat: PC/Games, desc: "Logiciels / Jeu Linux"}
@@ -135,7 +136,7 @@ login:
         selector: td.text
   test:
     path: index.php
-    selector: a[href="logout.php"]
+    selector: a[href*="logout.php"]
 
 search:
   paths:
@@ -173,6 +174,9 @@ search:
     download:
       selector: a[href^="download.php?id="]
       attribute: href
+    poster:
+      selector: img.nexus-lazy-load
+      attribute: data-src
     date_elapsed:
       # time type: time elapsed (default)
       selector: td.rowfollow:nth-child(4) > span[title]
